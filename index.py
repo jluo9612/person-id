@@ -19,9 +19,9 @@ input1 = {
 for file in files.files():
 	if "test" not in file.path:
 		data = {}
-		data["url"] = file.url 
+		data["url"] = file.url  # fix this!!!!!
 		name = os.path.splitext(basename(file.path))[0]
-		data["person"] = ''.join([i for i in name if not i.isdigit()])  #extracted name
+		data["person"] = ''.join([i for i in name if not i.isdigit()])  # extracts name from path
 		input1["images"].append(data)
 
 print (input1["images"])
